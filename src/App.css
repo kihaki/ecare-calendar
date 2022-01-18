@@ -3,5 +3,9 @@ body {
 }
 
 .App {
-    padding: 5% 20% 0%;
+    max-width: 900px;
+    padding-top: 5%;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0 auto;
 }
