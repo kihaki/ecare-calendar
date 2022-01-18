@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ecare-calendar/static/css/main.5baf4b97.css",
-    "main.js": "/ecare-calendar/static/js/main.e67c7476.js",
-    "static/js/787.95fd3671.chunk.js": "/ecare-calendar/static/js/787.95fd3671.chunk.js",
-    "index.html": "/ecare-calendar/index.html",
-    "main.5baf4b97.css.map": "/ecare-calendar/static/css/main.5baf4b97.css.map",
-    "main.e67c7476.js.map": "/ecare-calendar/static/js/main.e67c7476.js.map",
-    "787.95fd3671.chunk.js.map": "/ecare-calendar/static/js/787.95fd3671.chunk.js.map"
+    "main.css": "/static/css/main.5baf4b97.css",
+    "main.js": "/static/js/main.b3fb6152.js",
+    "static/js/787.95fd3671.chunk.js": "/static/js/787.95fd3671.chunk.js",
+    "index.html": "/index.html",
+    "main.5baf4b97.css.map": "/static/css/main.5baf4b97.css.map",
+    "main.b3fb6152.js.map": "/static/js/main.b3fb6152.js.map",
+    "787.95fd3671.chunk.js.map": "/static/js/787.95fd3671.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5baf4b97.css",
-    "static/js/main.e67c7476.js"
+    "static/js/main.b3fb6152.js"
   ]
 }
