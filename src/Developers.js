@@ -12,7 +12,7 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const reviewCaptain = date.reviewCaptain(devs, 7)
+    const reviewCaptain = date.reviewCaptain(devs, 5)
     const prPolice= date.prPolice(devs, 4)
     const standupMaster = date.standupMaster(devs, 4)
   return (
