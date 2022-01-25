@@ -57,7 +57,7 @@ const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 export default function Developers({devs, date}) {
     const captain = reviewCaptain(date, devs, 6)
     const police = prPolice(date, devs, 3)
-    const standup = standupMaster(date, devs, 4)
+    const standup = standupMaster(date, devs, 6)
   return (
     <TableContainer component={Paper}>
       <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
@@ -66,7 +66,7 @@ export default function Developers({devs, date}) {
             <TableCell>weekOfYear {weekOfYear(date)}, workDaysSinceStartOfYear {workDaysSinceStartOfYear(date)}, daysSinceStartOfYear {daysSinceStartOfYear(date)}</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>captain {reviewCaptainIndex(date, devs, 6)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 4)}</TableCell>
+            <TableCell>captain {reviewCaptainIndex(date, devs, 6)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 6)}</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>captain {captain}, police {police}, standup {standup}</TableCell>
