@@ -55,19 +55,22 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, 7)
-    const police = prPolice(date, devs, 4)
+    const captain = reviewCaptain(date, devs, 6)
+    const police = prPolice(date, devs, 3)
     const standup = standupMaster(date, devs, 4)
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
         <TableHead>
-          {/* <TableRow>
+          <TableRow>
             <TableCell>weekOfYear {weekOfYear(date)}, workDaysSinceStartOfYear {workDaysSinceStartOfYear(date)}, daysSinceStartOfYear {daysSinceStartOfYear(date)}</TableCell>
           </TableRow>
           <TableRow>
-            <TableCell>captain {reviewCaptainIndex(date, devs, 7)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 4)}</TableCell>
-          </TableRow> */}
+            <TableCell>captain {reviewCaptainIndex(date, devs, 6)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 4)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>captain {captain}, police {police}, standup {standup}</TableCell>
+          </TableRow>
           <TableRow>
             <TableCell>Developers</TableCell>
             <TableCell align="center">Review Captain</TableCell>
