@@ -62,7 +62,7 @@ export default function Developers({devs, date}) {
     <TableContainer component={Paper}>
       <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
         <TableHead>
-          <TableRow>
+          {/* <TableRow>
             <TableCell>weekOfYear {weekOfYear(date)}, workDaysSinceStartOfYear {workDaysSinceStartOfYear(date)}, daysSinceStartOfYear {daysSinceStartOfYear(date)}</TableCell>
           </TableRow>
           <TableRow>
@@ -70,7 +70,7 @@ export default function Developers({devs, date}) {
           </TableRow>
           <TableRow>
             <TableCell>captain {captain}, police {police}, standup {standup}</TableCell>
-          </TableRow>
+          </TableRow> */}
           <TableRow>
             <TableCell>Developers</TableCell>
             <TableCell align="center">Review Captain</TableCell>
