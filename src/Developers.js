@@ -7,18 +7,67 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+const monthLenghts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+function daysSinceStartOfYear(date) {
+  return monthLenghts.slice(0, date.getMonth()).reduce(
+    ( accumulator, currentValue ) => accumulator + currentValue,
+    0
+  ) + date.getDate()
+}
+
+function weekOfYear(date) {
+  // the first two days of the year are saturday and sunday
+  return Math.ceil((daysSinceStartOfYear(date) - 2) / 7)
+}
+
+function workDaysSinceStartOfYear(date) {
+    // the first two days of the year are saturday and sunday
+    return daysSinceStartOfYear(date) - (weekOfYear(date) * 2)
+}
+
+function reviewCaptainIndex(date, devs, offset) {
+  return (Math.floor(Math.max(daysSinceStartOfYear(date) - 13, 0) / 14) + offset) % devs.length
+}
+
+function reviewCaptain(date, devs, offset) {
+    return devs[reviewCaptainIndex(date, devs, offset)]
+}
+
+function prPoliceIndex(date, devs, offset) {
+  return (weekOfYear(date) + offset) % devs.length
+}
+
+function prPolice(date, devs, offset) {
+  return devs[prPoliceIndex(date, devs, offset)]
+}
+
+function standupMasterIndex(date, devs, offset) {
+  return (workDaysSinceStartOfYear(date) + offset) % devs.length
+}
+
+function standupMaster(date, devs, offset) {
+  return devs[standupMasterIndex(date, devs, offset)]
+}
+
 const ReviewCaptainEmoji = () => <>{String.fromCodePoint(0x1F440)}</>
 const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const reviewCaptain = date.reviewCaptain(devs, 6)
-    const prPolice= date.prPolice(devs, 4)
-    const standupMaster = date.standupMaster(devs, 4)
+    const captain = reviewCaptain(date, devs, 7)
+    const police = prPolice(date, devs, 4)
+    const standup = standupMaster(date, devs, 4)
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
+          {/* <TableRow>
+            <TableCell>weekOfYear {weekOfYear(date)}, workDaysSinceStartOfYear {workDaysSinceStartOfYear(date)}, daysSinceStartOfYear {daysSinceStartOfYear(date)}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>captain {reviewCaptainIndex(date, devs, 7)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 4)}</TableCell>
+          </TableRow> */}
           <TableRow>
             <TableCell>Developers</TableCell>
             <TableCell align="center">Review Captain</TableCell>
@@ -35,9 +84,9 @@ export default function Developers({devs, date}) {
               <TableCell component="th" scope="row">
                 {dev}
               </TableCell>
-              <TableCell align="center">{dev == reviewCaptain && <ReviewCaptainEmoji/>}</TableCell>
-              <TableCell align="center">{dev == prPolice && <PRPoliceEmoji/>}</TableCell>
-              <TableCell align="center">{dev == standupMaster && <StandupMasterEmoji/>}</TableCell>
+              <TableCell align="center">{dev == captain && <ReviewCaptainEmoji/>}</TableCell>
+              <TableCell align="center">{dev == police && <PRPoliceEmoji/>}</TableCell>
+              <TableCell align="center">{dev == standup && <StandupMasterEmoji/>}</TableCell>
             </TableRow>
           ))}
         </TableBody>
