@@ -9,6 +9,9 @@ import Paper from '@mui/material/Paper';
 
 const monthLenghts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
+const startDayOfThreeWeekSprints = 103
+const devIndexOnStartOfThreeWeeksSprint = 4
+
 function daysSinceStartOfYear(date) {
   return monthLenghts.slice(0, date.getMonth()).reduce(
     ( accumulator, currentValue ) => accumulator + currentValue,
@@ -26,8 +29,11 @@ function workDaysSinceStartOfYear(date) {
     return daysSinceStartOfYear(date) - (weekOfYear(date) * 2)
 }
 
-function reviewCaptainIndex(date, devs, offset) {
-  return (Math.floor(Math.max(daysSinceStartOfYear(date) + 1, 0) / 21) + offset) % devs.length
+function reviewCaptainIndex(date, devs) {
+  const daysSinceSoY = daysSinceStartOfYear(date)
+  const daysSinceFirstThreeWeeksSprintChange = daysSinceSoY - startDayOfThreeWeekSprints
+  const sprintsSinceThreeWeekSprints = Math.floor(daysSinceFirstThreeWeeksSprintChange / 21) + 1
+  return (sprintsSinceThreeWeekSprints + devIndexOnStartOfThreeWeeksSprint) % devs.length
 }
 
 function reviewCaptain(date, devs, offset) {
@@ -55,7 +61,7 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, 6)
+    const captain = reviewCaptain(date, devs)
     const police = prPolice(date, devs, 3)
     const standup = standupMaster(date, devs, 7)
   return (
