@@ -9,7 +9,7 @@ import Paper from '@mui/material/Paper';
 
 const monthLenghts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-const startDayOfThreeWeekSprints = 103
+const startDayOfThreeWeekSprints = 104
 const devIndexOnStartOfThreeWeeksSprint = 4
 
 function daysSinceStartOfYear(date) {
