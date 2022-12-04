@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ecare-calendar/static/css/main.bd49a6bf.css",
-    "main.js": "/ecare-calendar/static/js/main.1f28b6e8.js",
+    "main.js": "/ecare-calendar/static/js/main.81fc1c51.js",
     "static/js/787.95fd3671.chunk.js": "/ecare-calendar/static/js/787.95fd3671.chunk.js",
     "index.html": "/ecare-calendar/index.html",
     "main.bd49a6bf.css.map": "/ecare-calendar/static/css/main.bd49a6bf.css.map",
-    "main.1f28b6e8.js.map": "/ecare-calendar/static/js/main.1f28b6e8.js.map",
+    "main.81fc1c51.js.map": "/ecare-calendar/static/js/main.81fc1c51.js.map",
     "787.95fd3671.chunk.js.map": "/ecare-calendar/static/js/787.95fd3671.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bd49a6bf.css",
-    "static/js/main.1f28b6e8.js"
+    "static/js/main.81fc1c51.js"
   ]
 }
