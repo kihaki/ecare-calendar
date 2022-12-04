@@ -29,11 +29,11 @@ function workDaysSinceStartOfYear(date) {
     return daysSinceStartOfYear(date) - (weekOfYear(date) * 2)
 }
 
-function reviewCaptainIndex(date, devs) {
+function reviewCaptainIndex(date, devs, offset) {
   const daysSinceSoY = daysSinceStartOfYear(date)
   const daysSinceFirstThreeWeeksSprintChange = daysSinceSoY - startDayOfThreeWeekSprints
   const sprintsSinceThreeWeekSprints = Math.floor(daysSinceFirstThreeWeeksSprintChange / 21) + 1
-  return (sprintsSinceThreeWeekSprints + devIndexOnStartOfThreeWeeksSprint) % devs.length
+  return (sprintsSinceThreeWeekSprints + devIndexOnStartOfThreeWeeksSprint + offset) % devs.length
 }
 
 function reviewCaptain(date, devs, offset) {
@@ -61,9 +61,9 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, 2)
+    const captain = reviewCaptain(date, devs, -2)
     const police = prPolice(date, devs, 3)
-    const standup = standupMaster(date, devs, 6)
+    const standup = standupMaster(date, devs, 8)
   return (
     <TableContainer component={Paper}>
       <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
