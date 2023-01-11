@@ -9,8 +9,8 @@ import Paper from '@mui/material/Paper';
 
 const monthLenghts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-const startDayOfThreeWeekSprints = 104
-const devIndexOnStartOfThreeWeeksSprint = 5
+const startDayOfThreeWeekSprints = 12
+const devIndexOnStartOfThreeWeeksSprint = 0
 
 function daysSinceStartOfYear(date) {
   return monthLenghts.slice(0, date.getMonth()).reduce(
@@ -20,8 +20,8 @@ function daysSinceStartOfYear(date) {
 }
 
 function weekOfYear(date) {
-  // the first two days of the year are saturday and sunday
-  return Math.ceil((daysSinceStartOfYear(date) - 2) / 7)
+  // the first day of the year is sunday
+  return Math.ceil((daysSinceStartOfYear(date) - 1) / 7)
 }
 
 function workDaysSinceStartOfYear(date) {
@@ -41,7 +41,7 @@ function reviewCaptain(date, devs, offset) {
 }
 
 function prPoliceIndex(date, devs, offset) {
-  return (weekOfYear(date) + offset) % devs.length
+  return ((weekOfYear(date) + offset) - 2) % devs.length
 }
 
 function prPolice(date, devs, offset) {
@@ -49,7 +49,7 @@ function prPolice(date, devs, offset) {
 }
 
 function standupMasterIndex(date, devs, offset) {
-  return (workDaysSinceStartOfYear(date) + offset) % devs.length
+  return ((workDaysSinceStartOfYear(date) + offset) - 1) % devs.length
 }
 
 function standupMaster(date, devs, offset) {
@@ -61,9 +61,9 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, -2)
-    const police = prPolice(date, devs, 3)
-    const standup = standupMaster(date, devs, 8)
+    const captain = reviewCaptain(date, devs, 4)
+    const police = prPolice(date, devs, 4)
+    const standup = standupMaster(date, devs, 5)
   return (
     <TableContainer component={Paper}>
       <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
