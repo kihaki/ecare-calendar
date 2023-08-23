@@ -61,8 +61,8 @@ const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
 export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, 5)
-    const police = prPolice(date, devs, 5)
+    const captain = reviewCaptain(date, devs, 3)
+    const police = prPolice(date, devs, 6)
     const standup = standupMaster(date, devs, 5)
   return (
     <TableContainer component={Paper}>
