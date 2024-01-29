@@ -20,8 +20,9 @@ function daysSinceStartOfYear(date) {
 }
 
 function weekOfYear(date) {
-  // the first day of the year is sunday
-  return Math.ceil((daysSinceStartOfYear(date) - 1) / 7)
+  // the first day of the year is monday
+  const nonWorkdaysAtStartOfYear = 0
+  return Math.ceil((daysSinceStartOfYear(date) - nonWorkdaysAtStartOfYear) / 7)
 }
 
 function workDaysSinceStartOfYear(date) {
