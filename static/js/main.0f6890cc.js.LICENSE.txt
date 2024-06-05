@@ -4,6 +4,12 @@ object-assign
 @license MIT
 */
 
+/*!
+  react-datepicker v6.9.0
+  https://github.com/Hacker0x01/react-datepicker
+  Released under the MIT License.
+*/
+
 /** @license MUI v5.3.0
  *
  * This source code is licensed under the MIT license found in the
