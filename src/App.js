@@ -10,7 +10,7 @@ function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <div className="App">
-      <DatePicker selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+      <DatePicker dateFormat="yyyy-MM-dd" selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
       <Developers devs={devs} date={selectedDate} />
     </div>
   );

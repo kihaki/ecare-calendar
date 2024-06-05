@@ -6,9 +6,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { weekOfYear, weekdaysFromStartOfYear, sprintsSince, dayOfYear } from './datemath.js';
+import { weekOfYear, businessDaysSince2020, sprintsSince, dayOfYear } from './datemath.js';
 
-const devMode = false
+const devMode = true
 const lastSprintChange = new Date("2024-5-22")
 
 function reviewCaptain(date, devs, offset) {
@@ -22,7 +22,7 @@ function prPolice(date, devs, offset) {
 }
 
 function standupMaster(date, devs, offset) {
-  const standupMasterDevIndex = (((weekdaysFromStartOfYear(date) + offset) % devs.length) + devs.length) % devs.length;
+  const standupMasterDevIndex = (((businessDaysSince2020(date) + offset) % devs.length) + devs.length) % devs.length;
   return devs[standupMasterDevIndex];
 }
 
@@ -33,7 +33,7 @@ const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 function DevValues({ devs, date }) {
   if(devMode) {
     return (<TableRow>
-      <TableCell>Dev: weekOfYear {weekOfYear(date)}, weekdaysFromStartOfYear {weekdaysFromStartOfYear(date)}, dayOfYear {dayOfYear(date)}, sprints since start date {sprintsSince(date, lastSprintChange)}</TableCell>
+      <TableCell>Dev: weekOfYear {weekOfYear(date)}, businessDays {businessDaysSince2020(date)}, dayOfYear {dayOfYear(date)}, sprints since start date {sprintsSince(date, lastSprintChange)}</TableCell>
     </TableRow>)
   } else {
     return;

@@ -33,36 +33,19 @@ export function weekOfYear(d) {
 }
 
 /**
- * Blame (praise?) ChatGPT for this.
+ * Larry Tesslered from here https://stackoverflow.com/a/37069277
  */
-export function weekdaysFromStartOfYear(d) {
-    // Copy date so don't modify original
-    d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+export function businessDaysSince2020(d) {
+    let count = 0;
+    const endDate = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
     d.setMilliseconds(0);
-
-    const currentWeekNumber = weekOfYear(d);
-    
-    // Get the start of the year
-    const startOfYear = new Date(d.getFullYear(), 0, 1); // January 1st of the current year
-    const startDayOfWeek = startOfYear.getDay(); // 0 (Sunday) to 6 (Saturday)
-    
-    // Calculate the number of weekdays in the first week
-    const weekdaysInFirstWeek = 5 - Math.min(5, (7 - startDayOfWeek + 1) % 7);
-    
-    // Calculate the number of full weeks excluding the first week
-    const fullWeeks = currentWeekNumber - 2; // Subtract 2 because we don't count the first week and the current week as full weeks
-
-    // Total weekdays in full weeks
-    const weekdaysInFullWeeks = fullWeeks > 0 ? fullWeeks * 5 : 0;
-
-    // Calculate the number of weekdays in the current week
-    const dayOfWeek = d.getDay(); // 0 (Sunday) to 6 (Saturday)
-    const weekdaysInCurrentWeek = Math.min(dayOfWeek, 5);
-
-    // Total weekdays from the start of the year to now
-    const totalWeekdays = weekdaysInFirstWeek + weekdaysInFullWeeks + weekdaysInCurrentWeek;
-
-    return totalWeekdays;
+    var curDate = new Date(Date.UTC(2020, 0, 1));
+    while (curDate <= endDate) {
+        const dayOfWeek = curDate.getDay();
+        if(dayOfWeek !== 0 && dayOfWeek !== 6) count++;
+        curDate.setDate(curDate.getDate() + 1);
+    }
+    return count;
 }
 
 /**
