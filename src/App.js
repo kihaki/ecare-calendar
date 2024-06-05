@@ -20,9 +20,24 @@ function App() {
       <IconButton aria-label="forward" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() + 1)))}>
         <ArrowForwardIcon />
       </IconButton>
+      <DateComponent date={selectedDate} />
       <Developers devs={devs} date={selectedDate} />
     </div>
   );
 }
+
+// Utility function to format the date
+function formatDateToGerman(date) {
+  return new Intl.DateTimeFormat('de-DE', {
+      weekday: 'long', // Day of the week
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+  }).format(date);
+}
+
+const DateComponent = ({ date }) => {
+  return (<p>{formatDateToGerman(date)}</p>);
+};
 
 export default App
