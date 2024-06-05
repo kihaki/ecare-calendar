@@ -8,7 +8,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { weekOfYear, businessDaysSince2020, sprintsSince, dayOfYear } from './datemath.js';
 
-const devMode = true
+const devMode = false
 const lastSprintChange = new Date("2024-5-22")
 
 function reviewCaptain(date, devs, offset) {
