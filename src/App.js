@@ -13,14 +13,16 @@ function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <div className="App">
-      <IconButton aria-label="back" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() - 1)))}>
-        <ArrowBackIcon />
-      </IconButton>
-      <DatePicker dateFormat="yyyy-MM-dd" selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
-      <IconButton aria-label="forward" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() + 1)))}>
-        <ArrowForwardIcon />
-      </IconButton>
-      <DateComponent date={selectedDate} />
+      <div align="center">
+        <IconButton aria-label="back" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() - 1)))}>
+          <ArrowBackIcon />
+        </IconButton>
+        <DatePicker dateFormat="yyyy-MM-dd" selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+        <IconButton aria-label="forward" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() + 1)))}>
+          <ArrowForwardIcon />
+        </IconButton>
+        <DateComponent date={selectedDate} />
+      </div>
       <Developers devs={devs} date={selectedDate} />
     </div>
   );
@@ -29,10 +31,10 @@ function App() {
 // Utility function to format the date
 function formatDateToGerman(date) {
   return new Intl.DateTimeFormat('de-DE', {
-      weekday: 'long', // Day of the week
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+    weekday: 'long', // Day of the week
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
   }).format(date);
 }
 
