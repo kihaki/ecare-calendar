@@ -6,78 +6,52 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { weekOfYear, weekdaysFromStartOfYear, sprintsSince, dayOfYear } from './datemath.js';
 
-const monthLenghts = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-const startDayOfThreeWeekSprints = 19
-const devIndexOnStartOfThreeWeeksSprint = 0
-
-function daysSinceStartOfYear(date) {
-  return monthLenghts.slice(0, date.getMonth()).reduce(
-    ( accumulator, currentValue ) => accumulator + currentValue,
-    0
-  ) + date.getDate()
-}
-
-function weekOfYear(date) {
-  // the first day of the year is monday
-  const nonWorkdaysAtStartOfYear = 0
-  return Math.ceil((daysSinceStartOfYear(date) - nonWorkdaysAtStartOfYear) / 7)
-}
-
-function workDaysSinceStartOfYear(date) {
-    // the first two days of the year are saturday and sunday
-    return daysSinceStartOfYear(date) - (weekOfYear(date) * 2)
-}
-
-function reviewCaptainIndex(date, devs, offset) {
-  const daysSinceSoY = daysSinceStartOfYear(date)
-  const daysSinceFirstThreeWeeksSprintChange = daysSinceSoY - startDayOfThreeWeekSprints
-  const sprintsSinceThreeWeekSprints = Math.floor(daysSinceFirstThreeWeeksSprintChange / 21) + 1
-  return (sprintsSinceThreeWeekSprints + devIndexOnStartOfThreeWeeksSprint + offset) % devs.length
-}
+const devMode = false
+const lastSprintChange = new Date("2024-5-22")
 
 function reviewCaptain(date, devs, offset) {
-    return devs[reviewCaptainIndex(date, devs, offset)]
-}
-
-function prPoliceIndex(date, devs, offset) {
-  return ((weekOfYear(date) + offset) - 2) % devs.length
+  const reviewCaptainDevIndex = (((sprintsSince(date, lastSprintChange) + offset) % devs.length) + devs.length) % devs.length;
+  return devs[reviewCaptainDevIndex];
 }
 
 function prPolice(date, devs, offset) {
-  return devs[prPoliceIndex(date, devs, offset)]
-}
-
-function standupMasterIndex(date, devs, offset) {
-  return ((workDaysSinceStartOfYear(date) + offset) - 1) % devs.length
+  const prPoliceDevIndex = (((weekOfYear(date) + offset) % devs.length) + devs.length) % devs.length;
+  return devs[prPoliceDevIndex];
 }
 
 function standupMaster(date, devs, offset) {
-  return devs[standupMasterIndex(date, devs, offset)]
+  const standupMasterDevIndex = (((weekdaysFromStartOfYear(date) + offset) % devs.length) + devs.length) % devs.length;
+  return devs[standupMasterDevIndex];
 }
 
 const ReviewCaptainEmoji = () => <>{String.fromCodePoint(0x1F440)}</>
 const PRPoliceEmoji = () => <>{String.fromCodePoint(0x1F46E)}</>
 const StandupMasterEmoji = () => <>{String.fromCodePoint(0x1F50A)}</>
 
-export default function Developers({devs, date}) {
-    const captain = reviewCaptain(date, devs, 3)
-    const police = prPolice(date, devs, 6)
-    const standup = standupMaster(date, devs, 5)
+function DevValues({ devs, date }) {
+  if(devMode) {
+    return (<TableRow>
+      <TableCell>Dev: weekOfYear {weekOfYear(date)}, weekdaysFromStartOfYear {weekdaysFromStartOfYear(date)}, dayOfYear {dayOfYear(date)}, sprints since start date {sprintsSince(date, lastSprintChange)}</TableCell>
+    </TableRow>)
+  } else {
+    return;
+  }
+}
+
+export default function Developers({ devs, date }) {
+  const captain = reviewCaptain(date, devs, -2);
+  const police = prPolice(date, devs, 2);
+  const standup = standupMaster(date, devs, -2);
   return (
     <TableContainer component={Paper}>
       <Table /*</TableContainer>sx={{ minWidth: 650 }}*/ aria-label="simple table">
         <TableHead>
-          {/* <TableRow>
-            <TableCell>weekOfYear {weekOfYear(date)}, workDaysSinceStartOfYear {workDaysSinceStartOfYear(date)}, daysSinceStartOfYear {daysSinceStartOfYear(date)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>captain {reviewCaptainIndex(date, devs, 6)}, police {prPoliceIndex(date, devs, 4)}, standup {standupMasterIndex(date, devs, 6)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>captain {captain}, police {police}, standup {standup}</TableCell>
-          </TableRow> */}
+          {
+            DevValues({ devs, date })
+          }
+          
           <TableRow>
             <TableCell>Developers</TableCell>
             <TableCell align="center">Review Captain</TableCell>
@@ -94,9 +68,9 @@ export default function Developers({devs, date}) {
               <TableCell component="th" scope="row">
                 {dev}
               </TableCell>
-              <TableCell align="center">{dev == captain && <ReviewCaptainEmoji/>}</TableCell>
-              <TableCell align="center">{dev == police && <PRPoliceEmoji/>}</TableCell>
-              <TableCell align="center">{dev == standup && <StandupMasterEmoji/>}</TableCell>
+              <TableCell align="center">{dev == captain && <ReviewCaptainEmoji />}</TableCell>
+              <TableCell align="center">{dev == police && <PRPoliceEmoji />}</TableCell>
+              <TableCell align="center">{dev == standup && <StandupMasterEmoji />}</TableCell>
             </TableRow>
           ))}
         </TableBody>

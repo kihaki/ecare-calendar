@@ -1,0 +1,631 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineSystem.cmake:206 (message)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Darwin - 23.2.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc 
+      Build flags: -march=rv32imac_zicsr_zifencei
+      Id flags:  
+      
+      The output was:
+      0
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-closer.o): in function `_close_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/closer.c:47:(.text+0x14): warning: _close is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/lseekr.c:49:(.text+0x18): warning: _lseek is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-readr.o): in function `_read_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/readr.c:49:(.text+0x18): warning: _read is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-writer.o): in function `_write_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text+0x18): warning: _write is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-fclose.o): in function `fclose':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text+0x118): warning: __getreent is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-findfp.o): in function `__sfp':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/findfp.c:180:(.text+0x1ee): warning: pthread_setcancelstate is not implemented and will always fail
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/3.27.8/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++ 
+      Build flags: -march=rv32imac_zicsr_zifencei
+      Id flags:  
+      
+      The output was:
+      0
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-closer.o): in function `_close_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/closer.c:47:(.text+0x14): warning: _close is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/lseekr.c:49:(.text+0x18): warning: _lseek is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-readr.o): in function `_read_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/readr.c:49:(.text+0x18): warning: _read is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-writer.o): in function `_write_r':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/reent/writer.c:49:(.text+0x18): warning: _write is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-fclose.o): in function `fclose':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125:(.text+0x118): warning: __getreent is not implemented and will always fail
+      /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/libc.a(libc_a-findfp.o): in function `__sfp':
+      /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/newlib/newlib/libc/stdio/findfp.c:180:(.text+0x1ee): warning: pthread_setcancelstate is not implemented and will always fail
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/3.27.8/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1104 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv32-esp-elf-gcc (crosstool-NG esp-13.2.0_20230928) 13.2.0
+      Copyright (C) 2023 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-b5vYUN"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-b5vYUN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-b5vYUN'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_6963d
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
+        Target: riscv32-esp-elf
+        Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6963d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccmzrnA0.s
+        GNU C17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (riscv32-esp-elf)
+        	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.27.3), GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include
+        End of search list.
+        Compiler executable checksum: 0623cfc7adeb17d86b9249c4e1cb9ab8
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccmzrnA0.s
+        GNU assembler version 2.41 (riscv32-esp-elf) using BFD version (crosstool-NG esp-13.2.0_20230928) 2.41
+        COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/
+        LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs  -v CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -o cmTC_6963d   && :
+        Using built-in specs.
+        Reading specs from /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc
+        COLLECT_LTO_WRAPPER=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper
+        Target: riscv32-esp-elf
+        Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
+        COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/
+        LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_6963d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_6963d.'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2 -plugin /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so -plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cc7E3ckH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_6963d -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010074
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_6963d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_6963d.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include]
+        end of search list found
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/sys-include]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include]
+        implicit include dirs: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include-fixed;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/sys-include;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv32-esp-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-b5vYUN']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_6963d]
+        ignore line: [[1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
+        ignore line: [Target: riscv32-esp-elf]
+        ignore line: [Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/']
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/cc1 -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_6963d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccmzrnA0.s]
+        ignore line: [GNU C17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (riscv32-esp-elf)]
+        ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.27.3)  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 0623cfc7adeb17d86b9249c4e1cb9ab8]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/']
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccmzrnA0.s]
+        ignore line: [GNU assembler version 2.41 (riscv32-esp-elf) using BFD version (crosstool-NG esp-13.2.0_20230928) 2.41]
+        ignore line: [COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs  -v CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -o cmTC_6963d   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper]
+        ignore line: [Target: riscv32-esp-elf]
+        ignore line: [Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
+        ignore line: [COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_6963d' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_6963d.']
+        link line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2 -plugin /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so -plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cc7E3ckH.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_6963d -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group]
+          arg [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cc7E3ckH.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-melf32lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_6963d] ==> ignore
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib]
+          arg [CMakeFiles/cmTC_6963d.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib]
+        implicit libs: [gcc;c;nosys;c;gcc;gcc;c;nosys]
+        implicit objs: []
+        implicit dirs: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-y7wpl7"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-y7wpl7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-y7wpl7'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_3de0c
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++
+        Target: riscv32-esp-elf
+        Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_3de0c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccACR8ud.s
+        GNU C++17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (riscv32-esp-elf)
+        	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.27.3), GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include"
+        ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include
+        End of search list.
+        Compiler executable checksum: a42cb37f26605eb7ba65fee6d7a558ba
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccACR8ud.s
+        GNU assembler version 2.41 (riscv32-esp-elf) using BFD version (crosstool-NG esp-13.2.0_20230928) 2.41
+        COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/
+        LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/
+        COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs  -v CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_3de0c   && :
+        Using built-in specs.
+        Reading specs from /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++
+        COLLECT_LTO_WRAPPER=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper
+        Target: riscv32-esp-elf
+        Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c,c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) 
+        COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/
+        LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_3de0c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_3de0c.'
+         /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2 -plugin /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so -plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cctnOKqK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_3de0c -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010074
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_3de0c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_3de0c.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include]
+          add: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include]
+        end of search list found
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0/backward]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/sys-include]
+        collapse include dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include]
+        implicit include dirs: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include/c++/13.2.0/backward;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/include-fixed;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/sys-include;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/project.cmake:506 (__project)"
+      - "CMakeLists.txt:66 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv32-esp-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-y7wpl7']
+        ignore line: []
+        ignore line: [Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_3de0c]
+        ignore line: [[1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++   -march=rv32imac_zicsr_zifencei     -v -o CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
+        ignore line: [Target: riscv32-esp-elf]
+        ignore line: [Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/']
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/cc1plus -quiet -v -imultilib rv32imac_zicsr_zifencei/ilp32 -iprefix /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/ /opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_3de0c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imac_zicsr_zifencei -version -o /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccACR8ud.s]
+        ignore line: [GNU C++17 (crosstool-NG esp-13.2.0_20230928) version 13.2.0 (riscv32-esp-elf)]
+        ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.27.3)  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/../../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/riscv32-esp-elf/rv32imac_zicsr_zifencei/ilp32]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include/c++/13.2.0/backward]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/include-fixed]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/sys-include]
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: a42cb37f26605eb7ba65fee6d7a558ba]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/']
+        ignore line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/as -v --traditional-format -march=rv32imac_zicsr_zifencei -march=rv32imac_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//ccACR8ud.s]
+        ignore line: [GNU assembler version 2.41 (riscv32-esp-elf) using BFD version (crosstool-NG esp-13.2.0_20230928) 2.41]
+        ignore line: [COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imac_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++ -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs  -v CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_3de0c   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper]
+        ignore line: [Target: riscv32-esp-elf]
+        ignore line: [Configured with: /Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/src/gcc/configure --build=aarch64-build_apple-darwin21.4.0 --host=aarch64-build_apple-darwin21.4.0 --target=riscv32-esp-elf --prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --exec_prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf --with-local-prefix=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf --with-headers=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/builds/riscv32-esp-elf/riscv32-esp-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32gc --with-abi=ilp32 --with-pkgversion='crosstool-NG esp-13.2.0_20230928' --disable-__cxa_atexit --enable-cxx-flags=-ffunction-sections --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpfr=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-mpc=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --with-isl=/Users/brnomac003/.gitlab-runner/builds/qR2TxTby/1/idf/crosstool-NG/.build/riscv32-esp-elf/buildtools --enable-lto --enable-target-optspace --without-long-double-128 --disable-nls --enable-multiarch --enable-languages=c c++ --disable-libstdcxx-verbose --enable-threads=posix --enable-gcov-custom-rtio --enable-libstdcxx-time=yes]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (crosstool-NG esp-13.2.0_20230928) ]
+        ignore line: [COMPILER_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/]
+        ignore line: [LIBRARY_PATH=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/:/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imac_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_3de0c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imac_zicsr_zifencei' '-dumpdir' 'cmTC_3de0c.']
+        link line: [ /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2 -plugin /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so -plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper -plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cctnOKqK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_3de0c -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0 -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc -L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc -lc -lnosys -lc -lgcc --start-group -lgcc -lc -lnosys --end-group]
+          arg [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../libexec/gcc/riscv32-esp-elf/13.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/_d/7p1gjsf56qj_v578lgnzy4tw0000gn/T//cctnOKqK.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-melf32lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_3de0c] ==> ignore
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc]
+          arg [-L/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib] ==> dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib]
+          arg [CMakeFiles/cmTC_3de0c.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc]
+        collapse library dir [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/lib] ==> [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib]
+        implicit libs: [stdc++;m;gcc;c;nosys;c;gcc;gcc;c;nosys]
+        implicit objs: []
+        implicit dirs: [/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0/rv32imac_zicsr_zifencei/ilp32;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib/rv32imac_zicsr_zifencei/ilp32;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc/riscv32-esp-elf/13.2.0;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/lib/gcc;/Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/riscv32-esp-elf/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/CMakeLists.txt:249 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-RE0ARz"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-RE0ARz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-RE0ARz'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_14d80
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei -o CMakeFiles/cmTC_14d80.dir/CheckIncludeFile.c.obj -c /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-RE0ARz/CheckIncludeFile.c
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs CMakeFiles/cmTC_14d80.dir/CheckIncludeFile.c.obj -o cmTC_14d80   && :
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010074
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/CMakeLists.txt:249 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-715Nlt"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-715Nlt"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-715Nlt'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_42eaa
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei -o CMakeFiles/cmTC_42eaa.dir/CheckIncludeFile.c.obj -c /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-715Nlt/CheckIncludeFile.c
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs CMakeFiles/cmTC_42eaa.dir/CheckIncludeFile.c.obj -o cmTC_42eaa   && :
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010074
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/CMakeLists.txt:249 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5u1gIh"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5u1gIh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5u1gIh'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_7df29
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei -o CMakeFiles/cmTC_7df29.dir/CheckIncludeFile.c.obj -c /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-5u1gIh/CheckIncludeFile.c
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs CMakeFiles/cmTC_7df29.dir/CheckIncludeFile.c.obj -o cmTC_7df29   && :
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010074
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.27.8/share/cmake/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "/Users/endboss/esp/v5.2.1/esp-idf/CMakeLists.txt:249 (check_type_size)"
+    checks:
+      - "Check size of time_t"
+    directories:
+      source: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6f8o6c"
+      binary: "/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6f8o6c"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imac_zicsr_zifencei "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs "
+      CMAKE_MODULE_PATH: "/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake;/Users/endboss/esp/v5.2.1/esp-idf/tools/cmake/third_party"
+    buildResult:
+      variable: "HAVE_TIME_T_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6f8o6c'
+        
+        Run Build Command(s): /Users/endboss/.espressif/tools/ninja/1.11.1/ninja -v cmTC_86432
+        [1/2] /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc   -march=rv32imac_zicsr_zifencei -o CMakeFiles/cmTC_86432.dir/TIME_T_SIZE.c.obj -c /Users/endboss/dev/react/barmer-ecare-android-calendar/src/blink/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-6f8o6c/TIME_T_SIZE.c
+        [2/2] : && /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/riscv32-esp-elf-gcc -march=rv32imac_zicsr_zifencei -nostartfiles -march=rv32imac_zicsr_zifencei --specs=nosys.specs CMakeFiles/cmTC_86432.dir/TIME_T_SIZE.c.obj -o cmTC_86432   && :
+        /Users/endboss/.espressif/tools/riscv32-esp-elf/esp-13.2.0_20230928/riscv32-esp-elf/bin/../lib/gcc/riscv32-esp-elf/13.2.0/../../../../riscv32-esp-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 00010094
+        
+      exitCode: 0
+...
