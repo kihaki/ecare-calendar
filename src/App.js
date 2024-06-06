@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import "react-datepicker/dist/react-datepicker.css";
+import { Button } from '@mui/material';
 
 const devs = ['Alex', 'Christian', 'Florian', 'Hung', 'Jochen', 'Michael', 'Simon', 'Sven']
 
@@ -18,6 +19,7 @@ function App() {
           <ArrowBackIcon />
         </IconButton>
         <DatePicker dateFormat="yyyy-MM-dd" selected={selectedDate} onChange={(date) => setSelectedDate(date)} />
+        <Button onClick={() => setSelectedDate(new Date())}>Heute</Button>
         <IconButton aria-label="forward" onClick={() => setSelectedDate(new Date(selectedDate.setDate(selectedDate.getDate() + 1)))}>
           <ArrowForwardIcon />
         </IconButton>
