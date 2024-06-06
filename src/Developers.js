@@ -22,7 +22,12 @@ function prPolice(date, devs, offset) {
 }
 
 function standupMaster(date, devs, offset) {
-  const standupMasterDevIndex = (((businessDaysSince2020(date) + offset) % devs.length) + devs.length) % devs.length;
+  var standupMasterDevIndex = (((businessDaysSince2020(date) + offset) % devs.length) + devs.length) % devs.length;
+  const currentDay = date.getDay()
+  const currentDayIsWeekend = currentDay == 0 || currentDay == 6
+  if(currentDayIsWeekend) {
+    standupMasterDevIndex += 1; // On Weekends, show already the standup master for monday instead of friday
+  }
   return devs[standupMasterDevIndex];
 }
 
