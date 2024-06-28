@@ -26,7 +26,7 @@ function standupMaster(date, devs, offset) {
   const currentDay = date.getDay()
   const currentDayIsWeekend = currentDay == 0 || currentDay == 6
   if(currentDayIsWeekend) {
-    standupMasterDevIndex += 1; // On Weekends, show already the standup master for monday instead of friday
+    standupMasterDevIndex = (standupMasterDevIndex + 1) % devs.length; // On Weekends, show already the standup master for monday instead of friday
   }
   return devs[standupMasterDevIndex];
 }
