@@ -46,7 +46,7 @@ function DevValues({ devs, date }) {
 }
 
 export default function Developers({ devs, date }) {
-  const captain = reviewCaptain(date, devs, -2);
+  const captain = reviewCaptain(date, devs, -1);
   const police = prPolice(date, devs, 5);
   const standup = standupMaster(date, devs, 2);
   return (
