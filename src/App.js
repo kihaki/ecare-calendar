@@ -8,7 +8,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from '@mui/material';
 
-const devs = ['Florian', 'Hung', 'Michael', 'Oliver', 'Simon', 'Sven']
+const devs = ['Florian', 'Michael', 'Oliver', 'Simon', 'Sven']
 
 function App() {
   const [selectedDate, setSelectedDate] = useState(new Date());
